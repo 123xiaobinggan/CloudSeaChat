@@ -1,1 +1,0 @@
-{"version":3,"names":["pubsub","common_vendor","src"],"sources":["pubsub.js"],"sourcesContent":["import PubSubClass from '../node_modules/pubsub/src.js';\r\n\r\nconst pubsub = new PubSubClass();\r\n\r\nexport { pubsub };"],"mappings":";;;;AAEK,IAACA,MAAA,GAAS,IAAIC,aAAA,CAAWC,GAAA","ignoreList":[]}

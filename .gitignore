@@ -1,0 +1,19 @@
+# 依赖目录
+node_modules/
+
+# 打包目录
+unpackage/
+dist/
+
+# 编辑器配置
+.hbuilderx/
+.idea/
+.vscode/
+
+# 日志和系统文件
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
