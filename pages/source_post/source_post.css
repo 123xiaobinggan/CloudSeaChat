@@ -1,0 +1,456 @@
+.home-page {
+  padding: 20px;
+  /* background: #f4f5f7; */
+}
+.post {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-color: #eaeaea;
+  border: 4rpx solid #fff;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;  /* 新增：保持比例填充并裁剪 */
+  object-position: center;  /* 新增：确保居中裁剪 */
+}
+
+.avatar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2rpx solid rgba(255, 255, 255, 0.3);  /* 内层半透明白色边框 */
+  pointer-events: none;
+}
+
+.user-info {
+  flex: 1;
+}
+.username {
+  font-weight: bold;
+  font-size: 16px;
+}
+.meta {
+  font-size: 12px;
+  color: #888;
+}
+.origin {
+  font-weight: bold;
+  color: #333;
+}
+
+.post-delete {
+  position: absolute;
+  right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.post-delete:active {
+  background-color: rgba(255, 0, 0, 0.1); /* 选中时背景颜色变红 */
+  transform: scale(1.1); /* 选中时放大效果 */
+}
+
+.post-content {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+.post-content p {
+  font-size: 14px;
+  margin: 10px 0;
+  white-space: pre-line;
+}
+.hashtag {
+  color: #3b80ef;
+  font-weight: 500;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列九宫格 */
+  gap: 6px;
+  margin-top: 10px;
+}
+
+/* 媒体外层容器，固定宽高比例为正方形 */
+.media-item {
+  width: 100%;
+  padding-top: 100%; /* 高度 = 宽度，实现正方形 */
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.one-media-item {
+  width: 100%; /* 宽度为父容器的100% */
+  margin-top: 10px; /* 顶部间距 */
+  border-radius: 6px; /* 圆角 */
+  overflow: hidden; /* 防止内容溢出 */
+}
+
+/* 媒体本身 */
+.post-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 填充且裁剪成正方形 */
+  border-radius: 6px;
+}
+
+.post-one-media{
+  width: 100%; /* 宽度为父容器的100% */
+  height: auto; /* 高度自适应 */
+  object-fit: contain; /* 保持图片比例，且不超过容器 */
+}
+
+
+.delete-action {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 14px;
+  color: #666;
+  /* border: 1px solid #0a0a0a; */
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.like-action {
+  /* margin-left: auto; 将点赞按钮推到右侧 */
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.reply-like-action {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.icon {
+  margin-right: 4px;
+}
+
+.action-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.like-heart {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+.like-heart-animated {
+  transform: scale(1.2);
+  }
+.like-count {
+  margin-left: 4px;
+  min-width: 20px;
+  text-align: left;
+  font-size: 15px;
+}
+.comments {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding: 4px 0;
+  color: #444;
+}
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #eaeaea;
+  border: 4rpx solid #fff;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;  /* 新增：保持比例填充并裁剪 */
+  object-position: center;  /* 新增：确保居中裁剪 */
+}
+
+.comment-avatar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2rpx solid rgba(255, 255, 255, 0.3);  /* 内层半透明白色边框 */
+  pointer-events: none;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-user {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.comment-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.reply {
+  display: flex; /* 设置为弹性布局 */
+  align-items: flex-start; /* 垂直顶部对齐 */
+  margin-top: 15px;
+  font-size: 13px;
+  color: #555;
+  
+}
+
+.reply-content {
+  flex: 1; /* 占据剩余空间 */
+}
+
+.reply-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.reply-info{
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  flex: 1; /* 占据剩余空间 */
+}
+
+.reply-user {
+  font-weight: bold;
+}
+
+.reply-avatar{
+  flex-shrink: 0; /* 防止头像缩小 */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #eaeaea;
+  border: 4rpx solid #fff;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;  /* 新增：保持比例填充并裁剪 */
+  object-position: center;  /* 新增：确保居中裁剪 */
+}
+
+.reply-avatar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2rpx solid rgba(255, 255, 255, 0.3);  /* 内层半透明白色边框 */
+  pointer-events: none;
+}
+
+.reply-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.reply-action {
+  margin-left: auto; /* 将回复按钮推到右侧 */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.reply-input-wrapper{
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  margin-top: 10px;
+}
+
+.reply-input {
+  width: 80%; /* 占据 85% 宽度 */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 4px; /* 与按钮保持间距 */
+}
+
+.reply-text {
+  margin-left: 0px; /* 与回复按钮保持间距 */
+}
+
+.comment-input-wrapper {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  margin-top: 10px;
+}
+
+.comment-input {
+  width: 80%; /* 占据 85% 宽度 */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 4px; /* 与按钮保持间距 */
+}
+
+.post-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.post-textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.submit-button {
+  background: #3b80ef;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.reply-button {
+  background: #28a745; /* 好看的绿色 */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  width: 55px; /* 正方形宽度 */
+  height: 38px; /* 正方形高度 */
+  cursor: pointer;
+  display: inline-flex; /* 使用 inline-flex 确保水平排列 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  font-size: 16px; /* 字体大小 */
+  text-align: center; /* 文本居中 */
+  line-height: normal; /* 确保文字不被拉伸 */
+  padding: 0; /* 移除内边距 */
+}
+
+.reply-button:active {
+  background: #218838; /* 稍微深一点的绿色 */
+}
+
+.comment-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.comment-count {
+  margin-left: 4px;
+  font-size: 14px;
+  color: #666;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between; /* 左右对齐 */
+  align-items: center;
+}
+
+.comment-info{
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  flex: 1; /* 占据剩余空间 */
+}
+
+.no-post {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  margin-top: 50%;
+}

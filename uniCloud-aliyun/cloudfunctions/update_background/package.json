@@ -1,0 +1,7 @@
+{
+  "name": "update_background",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

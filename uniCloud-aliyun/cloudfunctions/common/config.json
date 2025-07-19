@@ -1,0 +1,6 @@
+{
+  "provider": "aliyun",
+  "spaceId": "canteen-program-1",
+  "clientSecret": "",
+  "endpoint": "https://api.bspapp.com"
+}

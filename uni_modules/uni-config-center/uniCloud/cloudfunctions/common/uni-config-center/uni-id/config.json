@@ -1,0 +1,7 @@
+{
+  "passwordSecret": "G7mX!k29^@sY$Pw2#Rq8vLmT",
+  "tokenSecret": "J8eL#qP47^sZn0&MkEr5pTy$",
+  "userCollection": "users",
+  "tokenExpiresIn": 7200,
+  "tokenExpiresThreshold": 600
+}

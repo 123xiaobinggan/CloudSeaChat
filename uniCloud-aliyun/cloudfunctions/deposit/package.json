@@ -1,0 +1,7 @@
+{
+  "name": "deposit",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

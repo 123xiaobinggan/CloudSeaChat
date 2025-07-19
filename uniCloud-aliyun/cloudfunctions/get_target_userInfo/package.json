@@ -1,0 +1,7 @@
+{
+  "name": "get_target_userInfo",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,28 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.input-field {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.login-button {
+  width: 100%;
+  padding: 3px;
+  background-color: #007AFF;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.register-link {
+  color: #007AFF;
+  text-decoration: underline;
+  cursor: pointer;
+}

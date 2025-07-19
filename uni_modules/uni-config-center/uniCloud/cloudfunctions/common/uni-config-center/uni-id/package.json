@@ -1,0 +1,6 @@
+{
+  "name": "uni-id",
+  "dependencies": {
+    "uni-config-center": "file:.."
+  }
+}

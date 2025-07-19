@@ -1,0 +1,7 @@
+{
+  "name": "get_user_visitors",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

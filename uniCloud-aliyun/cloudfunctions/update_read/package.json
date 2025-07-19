@@ -1,0 +1,7 @@
+{
+  "name": "update_read",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,277 @@
+.deposit-container  {
+    background-color: rgb(237, 237, 237);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid #000; */
+}
+
+.deposit-header{
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 100rpx; */
+    /* margin-left: 100rpx; */
+    /* justify-content: center; */
+    align-items: center;
+    height: 20%;
+    /* border: 2px solid #000; */
+}
+
+.deposit-header-title{
+  /* margin-top: 50rpx; */
+  margin-left: 80rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.user-header{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+    margin-top: 40rpx;
+    font-size: 30rpx;
+    color: grey;
+    justify-content: center;
+    align-items: center;
+    /* border: 10px solid #080808; */
+}
+
+.avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-color: #eaeaea;
+  border: 4rpx solid #fff;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;  /* 新增：保持比例填充并裁剪 */
+  object-position: center;  /* 新增：确保居中裁剪 */
+  margin-left: 280rpx;
+  margin-top: 30rpx;
+}
+
+
+.input-amount {
+  display: flex;
+  flex-direction: column;
+  padding-left: 80rpx;
+  padding-top: 50rpx;
+  /* border: 2px solid #ccc; */
+}
+
+.amount{
+    font-size: 30rpx;
+}
+
+.input-body{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30rpx;
+    border-bottom: 2px solid #ccc;
+    width: 90%;
+}
+
+
+.RMB{
+    width: 100rpx;
+    height: 80rpx;
+    margin-left: -20rpx;
+    margin-top: 30rpx;
+}
+
+.fake-input{
+    flex: 1;
+    margin-top: 20px;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20rpx;
+    font-size: 80rpx;
+    color: #333;
+    position: relative;
+    font-weight: bold;
+    /* border: 2px solid #ccc; */
+}
+
+.cursor {
+  width: 2rpx;
+  height: 100%;
+  background-color: #333;
+  margin-left: 4rpx;
+  animation: blink 1s steps(1) infinite;
+}
+
+/* 光标闪烁动画 */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0.2;
+  }
+}
+
+.deposit-body{
+    flex: 1;
+    background-color: #fff;
+    border-top-left-radius: 60rpx;
+    border-top-right-radius: 60rpx;
+    width: 100vw;
+}
+
+
+.keyboard {
+  display: flex;
+  background-color: rgb(247, 247, 247);
+  height: 30%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10rpx;
+  z-index: 100;
+  transition: transform 0.3s ease; /* 平滑过渡 */
+  transform: translateY(0); /* 默认是显示状态 */
+}
+
+/* 隐藏时往下平移 100% */
+.keyboard-hidden {
+  transform: translateY(100%);
+}
+
+.nine-keyboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 75%;
+    margin-top: 6rpx;
+}
+
+
+.key-item{
+  display: flex;
+  width: 30%;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  border-radius: 10rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.key-item.active{
+  background-color: rgb(222,222,222);
+}
+
+.left-button{
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+}
+
+.right-button{
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+    padding-left: 4px;
+    width: 26%;
+}
+
+.bottom-button{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.back-item{
+  display: flex;
+  height: 20%;
+  margin: 4px;
+  margin-right: 15px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+
+.back-item.active{
+  background-color: rgb(222,222,222);
+}
+
+.back-icon{
+  width: 50rpx;
+  height: 50rpx;
+  object-fit: contain;
+}
+
+.deposit-button{
+  display: flex;
+  background-color: rgb(155,230,191);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  color: white;
+  position: fixed;
+  transition: all 0.3s linear; /* 线性过渡 */
+  z-index: 998;
+}
+
+/* 键盘弹出时（大按钮） */
+.deposit-button.focused {
+  width: calc(26% - 20px);
+  height: calc(30% * 0.70) ;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* 键盘收起时（小按钮） */
+.deposit-button:not(.focused) {
+  width: 180rpx;
+  height: 120rpx;
+  opacity: 0.8;
+  right: 20px;
+  bottom: 50px;
+}
+
+.deposit-button.active1{
+  background-color: rgb(7,193,96);
+}
+
+.deposit-button.active2{
+  background-color: rgb(6,174,54);
+}
+
+
+.button-0{
+  display: flex;
+  width: 67%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 4px;
+  margin-left: 5px;
+}
+
+.button-0.active{
+  background-color: rgb(222,222,222);
+}
+
+.dot-button{
+  display: flex;
+  width: 33.33%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin: 4px;
+}
+
+.dot-button.active{
+  background-color: rgb(222,222,222);
+}

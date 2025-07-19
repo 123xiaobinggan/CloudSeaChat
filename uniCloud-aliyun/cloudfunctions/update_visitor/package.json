@@ -1,0 +1,7 @@
+{
+  "name": "update_visitor",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

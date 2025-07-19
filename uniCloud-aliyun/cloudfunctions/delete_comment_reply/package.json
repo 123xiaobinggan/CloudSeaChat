@@ -1,0 +1,7 @@
+{
+  "name": "delete_comment_reply",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

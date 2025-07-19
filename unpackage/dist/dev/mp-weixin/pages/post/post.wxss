@@ -1,0 +1,231 @@
+.post-page.data-v-0832fc77 {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* 顶部栏 */
+.nav-bar.data-v-0832fc77 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+/* 标题居中 */
+.title.data-v-0832fc77 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 发表按钮靠右 */
+.publish-btn.data-v-0832fc77 {
+  margin-left: 80%;
+  background-color: #4cb3ff;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+}
+
+/* 内容输入 */
+.content-card.data-v-0832fc77 {
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.content-input.data-v-0832fc77 {
+  width: 100%;
+  min-height: 100px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+/* 图片区域 */
+.image-grid.data-v-0832fc77 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.image-item.data-v-0832fc77 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 宽高比为1:1，强制正方形 */
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f0f0f0;
+}
+
+/* 删除按钮（右上角小叉） */
+.delete-btn.data-v-0832fc77 {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 添加图片按钮 */
+.add-image.data-v-0832fc77 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+  background: #f0f0f0;
+}
+.add-icon.data-v-0832fc77 {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 2px;
+}
+
+/* 功能区 */
+.options-card.data-v-0832fc77 {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.option-item.data-v-0832fc77 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+.option-item.data-v-0832fc77:last-child {
+  border-bottom: none;
+}
+.option-value.data-v-0832fc77 {
+  color: #888;
+  font-size: 14px;
+}
+
+/* 底部图标区域（预留） */
+.bottom-icons.data-v-0832fc77 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+.bottom-icon.data-v-0832fc77 {
+  width: 24px;
+  height: 24px;
+}
+.source-post-card.data-v-0832fc77 {
+  background-color: #f8f8f8; /* 灰白色底色 */
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+}
+.source-header.data-v-0832fc77 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.source-header .avatar.data-v-0832fc77 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #eaeaea;
+  border: 4rpx solid #fff;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;  /* 新增：保持比例填充并裁剪 */
+  object-position: center;  /* 新增：确保居中裁剪 */
+}
+.avatar.data-v-0832fc77::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2rpx solid rgba(255, 255, 255, 0.3);  /* 内层半透明白色边框 */
+  pointer-events: none;
+}
+.source-header .user-info.data-v-0832fc77{
+  flex: 1;
+}
+.source-header .user-info .username.data-v-0832fc77 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+.source-header .user-info .meta.data-v-0832fc77 {
+  font-size: 12px;
+  color: #888;
+}
+.source-content.data-v-0832fc77 {
+  font-size: 14px;
+  color: #555;
+}
+.source-content .image-grid.data-v-0832fc77 {
+  margin-top: 10px;
+}
+.source-content .img-count.data-v-0832fc77{
+  grid-template-columns: 1fr;
+}
+.source-text.data-v-0832fc77{
+  margin-bottom: 10px;
+}
+.comment-header.data-v-0832fc77 {
+  display: flex;
+  justify-content: space-between; /* 左右对齐 */
+  align-items: center;
+}
+.media-grid.data-v-0832fc77 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.media-item.data-v-0832fc77 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 宽高比为1:1，强制正方形 */
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f0f0f0;
+}
+.post-media.data-v-0832fc77 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.add-media.data-v-0832fc77 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+  background: #f0f0f0;
+}
+.add-icon.data-v-0832fc77 {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 2px;
+}

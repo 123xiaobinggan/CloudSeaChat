@@ -1,0 +1,7 @@
+{
+  "name": "get_ip",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}
