@@ -25,7 +25,7 @@
 					@tap="activeTab = 'posts'"
 				>
 					<view class="icon-count-wrapper1">
-						<image class="nav-icon1" src="/static/personal_info/帖子.png" mode="aspectFit" />
+						<image class="nav-icon1" src="/static/personal_info/post.png" mode="aspectFit" />
 						<text class="nav-count">{{ user.post_count }}</text>
 					</view>
 				</view>
@@ -36,7 +36,7 @@
 					@tap="activeTab = 'visitors'"
 				>
 					<view class="icon-count-wrapper2">
-					<image class="nav-icon2" src="/static/personal_info/访客.png" mode="aspectFit" />
+					<image class="nav-icon2" src="/static/personal_info/visitor.png" mode="aspectFit" />
 					<text class="nav-count">{{ user.visitor_count }}</text>
 					</view>
 				</view>
@@ -54,7 +54,7 @@
 							<text class="meta">{{ formatDate(post.create_time) }} · {{ post.ip }}</text>
 						</view>
 						<view v-show="(visitor.account_id === user.account_id) || visitor.admin" class="post-actions">
-							<image src="/static/index/垃圾桶.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
+							<image src="/static/index/rubbish.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
 						</view>
 					</view>
 
@@ -154,7 +154,7 @@
 				<view class="post-actions">
 					<view class="action like-action" @tap="()=>like(post,post,null,null,0)">
 						<image 
-						:src="post.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" 
+						:src="post.liked ? '/static/index/liked.png' : '/static/index/like.png'" 
 						class="action-icon" 
 						:class="{ 'like-heart-animated': post.liked }" 
 						/>
@@ -162,11 +162,11 @@
 						<text>{{ post.like_count }}</text>
 					</view>
 					<view class="action" @tap="()=>toggleComments(post)">
-						<image src="/static/index/评论.png" class="action-icon" />
+						<image src="/static/index/comment.png" class="action-icon" />
 						<text>{{ post.comment_count || 0 }}</text>
 					</view>
 					<view class="action" @tap="()=>to_post(post,1)">
-						<image src="/static/index/转发.png" class="action-icon" />
+						<image src="/static/index/forward.png" class="action-icon" />
 						<text>{{ post.forward_count || 0 }}</text>
 					</view>
 				</view>
@@ -184,7 +184,7 @@
 
 								<view class="comment-actions">
 									<view class="like-action" @tap.stop="()=>like(comment,post,comment,null,1)">
-										<image :src="comment.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" class="action-icon" />
+										<image :src="comment.liked ? '/static/index/liked.png' : '/static/index/like.png'" class="action-icon" />
 										<text>{{ comment.like_count }}</text>
 									</view>
 								</view>
@@ -222,7 +222,7 @@
 											</view>
 											<view class="reply-action">
 												<view class="reply-like-action" @tap.stop="()=>like(reply,post,comment,reply,2)">
-													<image :src="reply.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" class="action-icon" />
+													<image :src="reply.liked ? '/static/index/liked.png' : '/static/index/like.png'" class="action-icon" />
 													<text>{{ reply.like_count }}</text>
 												</view>
 											</view>
@@ -337,7 +337,7 @@
 					account_id: null,
 					username: '未登录',
 					description: '这个人很懒，什么都没有留下',
-					avatar: '/static/info/未登录.png',
+					avatar: '/static/info/not_login.png',
 					background: '',
 					post_count: 0,
 					visitor_count: 0,

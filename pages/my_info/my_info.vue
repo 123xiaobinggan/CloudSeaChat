@@ -1,6 +1,6 @@
 <template>
   <view class="content">
-    <image class="background-image" :src="'/static/info/背景.png'" mode="aspectFill" />
+    <image class="background-image" :src="'/static/info/background.png'" mode="aspectFill" />
     <view class="profile-card">
       <view class="header">
         <image class="avatar" :src="userInfo.avatar" mode="aspectFill" @tap="to_detail" />
@@ -19,7 +19,7 @@
         </view>
         <!-- 编辑 -->
         <view class="edit-btn" v-show="login_status" @tap="goToEdit">
-            <image src="/static/info/编辑.png" mode="aspectFit" />
+            <image src="/static/info/edit.png" mode="aspectFit" />
         </view>
       </view>
       <!-- 登录 -->
@@ -70,7 +70,7 @@ import PubSub from 'pubsub-js';
         account_id: '',
         username: '未登录',
         description: '这个人很懒，什么都没有留下',
-        avatar: '/static/info/未登录.png',
+        avatar: '/static/info/not_login.png',
         level: 0,
         activity: 0,
         coupon: 0,
@@ -173,7 +173,7 @@ import PubSub from 'pubsub-js';
         username: '未登录',
         account_id: '',
         description: '这个人很懒，什么都没有留下',
-        avatar: '/static/info/未登录.png',
+        avatar: '/static/info/not_login.png',
         level: 0,
         activity: 0,
         coupon: 0,

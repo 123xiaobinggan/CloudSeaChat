@@ -16,7 +16,7 @@
 			<view class="input-amount">
 				<text class="amount">金额</text>
 				<view class="input-body" @tap.stop="isInputFocused = true">
-					<img src="/static/deposit/人民币符号.png" class="RMB">
+					<img src="/static/deposit/RMB.png" class="RMB">
 					
 					<view class="fake-input">
 						<text>{{ rechargeAmount }}</text>
@@ -77,7 +77,7 @@
 						@touchstart="setActive('back')"
 						@touchend="removeActive('back')"
 					>
-						<image src="/static/deposit/退格键.png" class="back-icon" />
+						<image src="/static/deposit/back.png" class="back-icon" />
 					</view>
 
 					
@@ -107,7 +107,7 @@ export default {
 	  userInfo: {
         account_id: '',
         username: '未登录',
-        avatar: '/static/info/未登录.png',
+        avatar: '/static/info/not_login.png',
 	  },
 	  keys: [
         '1', '2', '3',

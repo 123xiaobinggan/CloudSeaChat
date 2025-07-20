@@ -10,7 +10,7 @@
                     <text class="meta">{{ formatDate(post.create_time) }} · {{ post.ip }}</text>
                     </view>
                     <view v-if="post.account_id == user.account_id || user.admin" class="post-actions">
-                    <image src="/static/index/垃圾桶.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
+                    <image src="/static/index/rubbish.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
                     </view>
                 </view>
 
@@ -47,18 +47,18 @@
                 <view class="post-actions">
                     <view class="action like-action" @tap="()=>like(post,post,null,null,0)">
                     <image 
-                    :src="post.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" 
+                    :src="post.liked ? '/static/index/liked.png' : '/static/index/like.png'" 
                     class="action-icon" 
                     :class="{ 'like-heart-animated': post.liked }" />
 
                     <text>{{ post.like_count }}</text>
                     </view>
                     <view class="action">
-                    <image src="/static/index/评论.png" class="action-icon" />
+                    <image src="/static/index/comment.png" class="action-icon" />
                     <text>{{ post.comment_count || 0 }}</text>
                     </view>
                     <view class="action" @tap="()=>to_post(post,1)">
-                    <image src="/static/index/转发.png" class="action-icon" />
+                    <image src="/static/index/forward.png" class="action-icon" />
                     <text>{{ post.forward_count || 0 }}</text>
                     </view>
                 </view>
@@ -76,7 +76,7 @@
 
                         <view class="comment-actions">
                             <view class="like-action" @tap.stop="()=>like(comment,post,comment,null,1)">
-                              <image :src="comment.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" class="action-icon" />
+                              <image :src="comment.liked ? '/static/index/liked.png' : '/static/index/like.png'" class="action-icon" />
                               <text>{{ comment.like_count }}</text>
                             </view>
                         </view>
@@ -114,7 +114,7 @@
                                 </view>
                                 <view class="reply-action">
                                 <view class="reply-like-action" @tap.stop="()=>like(reply,post,comment,reply,2)">
-                                    <image :src="reply.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" class="action-icon" />
+                                    <image :src="reply.liked ? '/static/index/liked.png' : '/static/index/like.png'" class="action-icon" />
                                     <text>{{ reply.like_count }}</text>
                                 </view>
                                 </view>
@@ -179,7 +179,7 @@ export default {
         user: {
             account_id: '',
             username: '',
-            avatar: '/static/info/未登录.png',
+            avatar: '/static/info/not_login.png',
             admin: false,
         },
         post: {},
@@ -197,7 +197,7 @@ export default {
     this.post_id = option.post_id;
     this.user.account_id = option.account_id;
     this.user.username = option.username || '未登录';
-    this.user.avatar = option.avatar || '/static/info/未登录.png';
+    this.user.avatar = option.avatar || '/static/info/not_login.png';
     this.user.admin = option.admin;
     uni.showLoading({ 
         title: '加载中...', 

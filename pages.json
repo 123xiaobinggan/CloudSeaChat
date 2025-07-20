@@ -79,18 +79,18 @@
 			{
 				"pagePath": "pages/index/index",
 				"text": "首页",
-				"iconPath": "static/tabbar/首页.png"
+				"iconPath": "static/tabbar/index.png"
                 
 			},
 			{
 				"pagePath": "pages/message/message",
 				"text": "消息",
-				"iconPath": "static/tabbar/消息.png"
+				"iconPath": "static/tabbar/message.png"
 			},
 			{
 				"pagePath": "pages/my_info/my_info",
 				"text": "我的",
-				"iconPath": "static/tabbar/我的.png"
+				"iconPath": "static/tabbar/my_info.png"
                 
 			}
 		]

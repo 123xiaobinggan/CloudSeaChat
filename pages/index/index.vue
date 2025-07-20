@@ -3,10 +3,10 @@
     <!-- 顶部输入框和发帖按钮 -->
     <view v-if="show_top_bar" :class="['top-bar', {'no-shadow': isAtTop}]">
       <view class="search-wrapper">
-        <image src="/static/index/搜索.png" class="search-icon" />
+        <image src="/static/index/search.png" class="search-icon" />
         <input v-model="searchQuery" placeholder="搜索帖子..." class="search-input" @input="filterPosts()" />
       </view>
-      <image src="/static/index/发帖.png" class="post-icon" @tap="to_post(null,0)" />
+      <image src="/static/index/post.png" class="post-icon" @tap="to_post(null,0)" />
   </view>
 
     <!-- 帖子头 -->
@@ -19,7 +19,7 @@
           <text class="meta">{{ formatDate(post.create_time) }} · {{ post.ip }}</text>
         </view>
         <view v-if="post.account_id == user.account_id || user.admin" class="post-actions">
-          <image src="/static/index/垃圾桶.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
+          <image src="/static/index/rubbish.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
         </view>
       </view>
 
@@ -125,7 +125,7 @@
       <view class="post-actions">
         <view class="action like-action" hover-class="none" @tap="()=>like(post,post,null,null,0)">
           <image 
-            :src="post.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" 
+            :src="post.liked ? '/static/index/liked.png' : '/static/index/like.png'" 
             class="action-icon" 
             :class="{ 'like-heart-animated': post.liked }" 
           />
@@ -133,11 +133,11 @@
           <text>{{ post.like_count }}</text>
         </view>
         <view class="action" hover-class="none" @tap="()=>toggleComments(post)">
-          <image src="/static/index/评论.png" class="action-icon" />
+          <image src="/static/index/comment.png" class="action-icon" />
           <text>{{ post.comment_count || 0 }}</text>
         </view>
         <view class="action" @tap="()=>to_post(post,1)">
-          <image src="/static/index/转发.png" class="action-icon" />
+          <image src="/static/index/forward.png" class="action-icon" />
           <text>{{ post.forward_count || 0 }}</text>
         </view>
       </view>
@@ -155,7 +155,7 @@
 
               <view class="comment-actions">
                 <view class="like-action" @tap.stop="()=>like(comment,post,comment,null,1)">
-                  <image :src="comment.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" class="action-icon" />
+                  <image :src="comment.liked ? '/static/index/liked.png' : '/static/index/like.png'" class="action-icon" />
                   <text>{{ comment.like_count }}</text>
                 </view>
               </view>
@@ -193,7 +193,7 @@
                     </view>
                     <view class="reply-action">
                       <view class="reply-like-action" @tap.stop="()=>like(reply,post,comment,reply,2)">
-                        <image :src="reply.liked ? '/static/index/已赞.png' : '/static/index/赞.png'" class="action-icon" />
+                        <image :src="reply.liked ? '/static/index/liked.png' : '/static/index/like.png'" class="action-icon" />
                         <text>{{ reply.like_count }}</text>
                       </view>
                     </view>
@@ -272,7 +272,7 @@ export default {
         account_id: '',
         username: '未登录',
         description: '这个人很懒，什么都没有留下',
-        avatar: '/static/info/头像.png',
+        avatar: '/static/info/avatar.png',
         admin:false, // 是否为管理员
         ip: '未知',
       },
