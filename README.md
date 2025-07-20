@@ -49,7 +49,7 @@ Pages：
 
 克隆：
 
-- 建立uniCLOUD云空间，在HBuider上绑定该云空间。
+- 建立uniCLOUD云空间，在HBuider上绑定该云空间。如不使用HBuider，则在云函数调用时使用axios请求响应云函数的api。
 
 - 在/pages建立相应的页面同名文件夹，里面放置 页面名.vue和 页面名.css，将相应的页面代码复制上去
 
