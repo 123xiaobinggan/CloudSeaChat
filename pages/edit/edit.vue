@@ -111,7 +111,9 @@ export default {
   onLoad(){
     const app = getApp();
     this.userInfo = app.userInfo;
-    
+    this.userInfo.oldPassword = '';
+    this.userInfo.password = '';
+    this.userInfo.confirmPassword = '';
   }
 }
 </script>

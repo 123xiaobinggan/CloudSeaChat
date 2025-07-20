@@ -16,7 +16,7 @@
 			<view class="input-amount">
 				<text class="amount">金额</text>
 				<view class="input-body" @tap.stop="isInputFocused = true">
-					<img src="/static/deposit/RMB.png" class="RMB">
+					<img class="rmb-icon" src="https://mp-ad47c7bd-10fe-4cc5-9ad0-a7ff552214bc.cdn.bspapp.com/Personal_background/rmb.png" />
 					
 					<view class="fake-input">
 						<text>{{ rechargeAmount }}</text>
