@@ -65,4 +65,4 @@ Pages：
 
 CloudSeaChat (app)
 
-直接下载apk即可
+直接在release下载apk即可
