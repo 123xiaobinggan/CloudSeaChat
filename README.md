@@ -24,24 +24,37 @@
 TarBar:
 
 index:主页面，帖子页面，广场
+
 messages:接收消息，包括点赞消息，评论消息，转发消息
+
 my_info:我的信息
 
 Pages：
 
 source_post:  展示完整的帖子，评论也展开
+
 login:  登录功能
+
 edit:  更换用户信息
+
 register:  注册
+
 deposit:  充值
+
 post:  发帖
+
 personal_info: 用户个人页面
 
 
 克隆：
 建立uniCLOUD云空间，在HBuider上绑定该云空间。
+
 在/pages建立相应的页面同名文件夹，里面放置 页面名.vue和 页面名.css，将相应的页面代码复制上去
+
 在uniCloud文件夹下的/cloudFunction 新建相应的云函数并上传部署到云端
+
 在云空间控制台的数据表新建数据表，表结构复制相应的db schema
+
 在HBuilder运行到小程序开发者模拟器，即可查看
+
 发行到小程序-微信，上传代码，小程序开发完成
