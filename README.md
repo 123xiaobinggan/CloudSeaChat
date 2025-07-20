@@ -1,4 +1,4 @@
-# CloudSeaChat(小程序版）
+# CloudSeaChat(小程序版/app版）
 一个具有发帖功能的小程序，具有用户生态系统
 
 技术栈： vue + uni-app + uniCLoud(aliyun)
@@ -63,6 +63,6 @@ Pages：
 
 
 
-- #CloudSeaChat (app)
+#CloudSeaChat (app)
 
 直接下载apk即可
