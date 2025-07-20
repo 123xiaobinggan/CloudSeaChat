@@ -23,30 +23,31 @@
 
 TarBar:
 
-index:主页面，帖子页面，广场
+- index:主页面，帖子页面，广场
 
-messages:接收消息，包括点赞消息，评论消息，转发消息
+- messages:接收消息，包括点赞消息，评论消息，转发消息
 
-my_info:我的信息
+- my_info:我的信息
 
 Pages：
 
-source_post:  展示完整的帖子，评论也展开
+- source_post:  展示完整的帖子，评论也展开
 
-login:  登录功能
+- login:  登录功能
 
-edit:  更换用户信息
+- edit:  更换用户信息
 
-register:  注册
+- register:  注册
 
-deposit:  充值
+- deposit:  充值
 
-post:  发帖
+- post:  发帖
 
-personal_info: 用户个人页面
+- personal_info: 用户个人页面
 
 
 克隆：
+
 建立uniCLOUD云空间，在HBuider上绑定该云空间。
 
 在/pages建立相应的页面同名文件夹，里面放置 页面名.vue和 页面名.css，将相应的页面代码复制上去
