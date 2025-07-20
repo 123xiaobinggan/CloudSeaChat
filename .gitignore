@@ -1,5 +1,6 @@
 # 依赖目录
 node_modules/
+uni_modules/
 
 # 打包目录
 unpackage/
