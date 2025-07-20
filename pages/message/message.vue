@@ -124,17 +124,17 @@ import PubSub from 'pubsub-js';
                 },
                 tabs: [
                     {
-                        icon: '/static/index/赞.png',
+                        icon: '/static/index/like.png',
                         type: 'like',
                         count: 0
                     },
                     {
-                        icon: '/static/index/评论.png',
+                        icon: '/static/index/comment.png',
                         type: 'comment',
                         count: 0
                     },
                     {
-                        icon: '/static/index/转发.png',
+                        icon: '/static/index/forward.png',
                         type: 'share',
                         count: 0
                     }
