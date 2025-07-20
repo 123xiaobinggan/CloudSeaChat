@@ -63,6 +63,6 @@ Pages：
 
 
 
-#CloudSeaChat (app)
+CloudSeaChat (app)
 
 直接下载apk即可
