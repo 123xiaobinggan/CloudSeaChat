@@ -110,7 +110,7 @@
                             <view class="reply-header">
                                 <view class="reply-info">
                                 <text class="reply-user">{{ reply.username }}</text>
-                                <text class="reply-meta">{{ formatDate(reply.craete_time) }} · {{ reply.ip }}</text>
+                                <text class="reply-meta">{{ formatDate(reply.create_time) }} · {{ reply.ip }}</text>
                                 </view>
                                 <view class="reply-action">
                                 <view class="reply-like-action" @tap.stop="()=>like(reply,post,comment,reply,2)">
