@@ -1,5 +1,5 @@
-# CloudSeaChat
-一个具有发帖功能的小程序，具有用户生态系统
+# CloudSeaChat(小程序版/app版）
+一个具有发帖功能的小程序/app，具有用户生态系统
 
 技术栈： vue + uni-app + uniCLoud(aliyun)
 
@@ -60,3 +60,9 @@ Pages：
 - 在HBuilder运行到小程序开发者模拟器，即可查看
 
 - 发行到小程序-微信，上传代码，小程序开发完成
+
+
+
+CloudSeaChat (app)
+
+直接在release下载apk即可
