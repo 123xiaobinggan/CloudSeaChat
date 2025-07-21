@@ -90,7 +90,7 @@ import PubSub from 'pubsub-js';
       if(app.userInfo) {
         Object.assign(this.userInfo,app.userInfo);
         this.login_status = app.login_status;
-        if(this.userInfo.unread_messages){
+        if(this.userInfo.unread_messages>0){
           uni.showTabBarRedDot({
             index: 1,
           });
@@ -101,15 +101,6 @@ import PubSub from 'pubsub-js';
    },
    moundted(){
     this.startMeteorShower();
-   },
-   onLoad() {
-
-   },
-   onUnload() {
-     if(this.token){
-       PubSub.unsubscribe(this.token);
-       this.token = null;
-     }
    },
    methods: {
      goToEdit() { 

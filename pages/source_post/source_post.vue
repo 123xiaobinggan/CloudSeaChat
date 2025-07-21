@@ -5,12 +5,12 @@
                 <view class="post-header">
                     <image :src="post.avatar" class="avatar" mode="aspectFill" />
                     <view class="user-info">
-                    <text class="username">{{ post.username }}</text>
-                    <br/>
-                    <text class="meta">{{ formatDate(post.create_time) }} · {{ post.ip }}</text>
+                      <text class="username">{{ post.username }}</text>
+                      <br/>
+                      <text class="meta">{{ formatDate(post.create_time) }} · {{ post.ip }}</text>
                     </view>
                     <view v-if="post.account_id == user.account_id || user.admin" class="post-actions">
-                    <image src="/static/index/rubbish.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
+                      <image src="/static/index/rubbish.png" class="action-icon" @tap="()=>confirmDeletePost(post)" />
                     </view>
                 </view>
 
@@ -110,7 +110,7 @@
                             <view class="reply-header">
                                 <view class="reply-info">
                                 <text class="reply-user">{{ reply.username }}</text>
-                                <text class="reply-meta">{{ formatDate(reply.date) }} · {{ reply.ip }}</text>
+                                <text class="reply-meta">{{ formatDate(reply.craete_time) }} · {{ reply.ip }}</text>
                                 </view>
                                 <view class="reply-action">
                                 <view class="reply-like-action" @tap.stop="()=>like(reply,post,comment,reply,2)">
